@@ -22,5 +22,5 @@ jobs:
         working-directory: ./functions
 
       - name: Run Tests
-        run: npm test
+        run: npm run test
         working-directory: ./functions
