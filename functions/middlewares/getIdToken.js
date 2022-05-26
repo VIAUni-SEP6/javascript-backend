@@ -1,4 +1,3 @@
-const functions = require('firebase-functions');
 const admin = require('../firebase-service.js');
 
 const validateFirebaseIdToken = async (req, res, next) => {

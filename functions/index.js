@@ -1,6 +1,4 @@
 const functions = require("firebase-functions");
-const admin = require('./firebase-service.js');
-const createUser = require('./services/createUser');
 const validateFirebaseIdToken = require('./middlewares/getIdToken');
 const toplistModule = require('./services/toplist');
 const addFavouriteMovie = toplistModule.addFavouriteMovie;
@@ -17,8 +15,6 @@ app.use(express.json());
 app.use(express.urlencoded({extended:false}));
 app.use(cors({origin:true}));
 app.use(validateFirebaseIdToken);
-
-app.post('/signup', createUser);
 
 app.get('/addFavouriteMovie/:id', addFavouriteMovie);
 
